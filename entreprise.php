@@ -33,7 +33,7 @@ $entreprise = getEntreprise($id);
 
     <a href="competence.php?id=<?php echo $entreprise['id']; ?>">Axe compétence</a><br>
     <a href="reactivite.php?id=<?php echo $entreprise['id']; ?>">Axe réactivité</a><br>
-    <a href="numerique.php?id=<?php echo $entreprise['id']; ?>">Axe innovation</a><br>
+    <a href="numerique.php?id=<?php echo $entreprise['id']; ?>">Axe numérique</a><br>
 
     <a href="synthese.php?id=<?php echo $entreprise['id']; ?>">Synthèse</a>
 

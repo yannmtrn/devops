@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78dfbbcb-fdf1-4d4f-837c-19eb24fa5f66" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/entreprise.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/head.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/competence.html" beforeDir="false" afterPath="$PROJECT_DIR$/competence.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connectDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/connectDB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devops bdd.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numerique.html" beforeDir="false" afterPath="$PROJECT_DIR$/numerique.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactivite.html" beforeDir="false" afterPath="$PROJECT_DIR$/reactivite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/synthese.html" beforeDir="false" afterPath="$PROJECT_DIR$/synthese.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,5 +56,28 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
