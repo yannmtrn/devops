@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : mar. 25 avr. 2023 à 13:36
+-- Généré le : mer. 26 avr. 2023 à 09:25
 -- Version du serveur : 5.7.39
 -- Version de PHP : 8.2.0
 
@@ -207,6 +207,52 @@ CREATE TABLE `Reponse` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Déchargement des données de la table `Reponse`
+--
+
+INSERT INTO `Reponse` (`id`, `point`, `commentaire`, `question_id`) VALUES
+(1, 1, 'coucou', 1),
+(2, 2, 'coucou', 2),
+(3, 1, 'coucou', 3),
+(4, 0, 'coucou', 4),
+(5, 1, 'coucou', 5),
+(6, 0, 'coucou', 6),
+(7, 1, 'coucou', 7),
+(8, 2, 'coucou', 8),
+(9, 1, 'coucou', 9),
+(10, 1, 'coucou', 10),
+(11, 1, 'coucou', 11),
+(12, 2, 'coucou', 12),
+(13, 0, 'coucou', 13),
+(14, 0, 'coucou', 14),
+(15, 1, 'coucou', 15),
+(16, 2, 'coucou', 16),
+(17, 1, 'coucou', 17),
+(18, 0, 'coucou', 18),
+(19, 2, 'coucou', 19),
+(20, 1, 'coucou', 20),
+(21, 1, 'coucou', 21),
+(22, 2, 'coucou', 22),
+(23, 2, 'coucou', 23),
+(24, 0, 'coucou', 24),
+(25, 1, 'coucou', 25),
+(26, 2, 'coucou', 26),
+(27, 0, 'coucou', 27),
+(28, 2, 'coucou', 28),
+(29, 1, 'coucou', 29),
+(30, 2, 'coucou', 30),
+(31, 1, 'coucou', 31),
+(32, 1, 'coucou', 32),
+(33, 2, 'coucou', 33),
+(34, 0, 'coucou', 34),
+(35, 2, 'coucou', 35),
+(36, 1, 'coucou', 36),
+(37, 2, 'coucou', 37),
+(38, 0, 'coucou', 38),
+(39, 1, 'coucou', 39),
+(40, 2, 'coucou', 40);
+
+--
 -- Index pour les tables déchargées
 --
 
@@ -302,7 +348,7 @@ ALTER TABLE `Question`
 -- AUTO_INCREMENT pour la table `Reponse`
 --
 ALTER TABLE `Reponse`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- Contraintes pour les tables déchargées

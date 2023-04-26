@@ -2,7 +2,10 @@
 
 // connect db localhost
 
-const DB_HOST       = "172.16.47.139:3306";
+/*const DB_HOST       = "localhost:8889";
+const DB_USERNAME   = "root";
+const DB_PASSWORD   = "root";*/
+const DB_HOST       = "172.16.47.243:3306";
 const DB_USERNAME   = "DOuser";
 const DB_PASSWORD   = "resuOD";
 const DB_NAME       = "devops";
@@ -26,13 +29,34 @@ function connectDB() {
     }
 }
 
-function getAllQuestion() {
+function getEntreprise($id) {
 
     try {
 
         $pdo = connectDB();
 
-        $sql = "SELECT Grille.id AS id_grille, Axe.nom AS nom_axe, Categorie.nom AS nom_categorie, Question.texte AS texte_question, Question.texte_2_point, Question.texte_1_point, Question.texte_0_point FROM Grille INNER JOIN Axe ON Grille.id = Axe.grille_id INNER JOIN Categorie ON Axe.id = Categorie.axe_id INNER JOIN Question ON Categorie.id = Question.categorie_id";
+        $sql = "SELECT id, name FROM Entreprise WHERE id = :id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $result;
+
+    } catch (PDOException $e) {
+        //display error
+        die("ERROR: Could not connect. " . $e->getMessage());
+    }
+
+}
+
+function getAllEntreprise() {
+
+    try {
+
+        $pdo = connectDB();
+
+        $sql = "SELECT id, name FROM Entreprise";
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -43,12 +67,51 @@ function getAllQuestion() {
         //display error
         die("ERROR: Could not connect. " . $e->getMessage());
     }
+
 }
 
-$datas = getAllQuestion();
+function getAllQuestion($id) {
 
-print_r($datas);
+    try {
 
-/*foreach ($datas as $data) {
-    echo $data['nom_entreprise'] . " " . $data['id_grille'] . " " . $data['nom_axe'] . " " . $data['nom_categorie'] . " " . $data['texte_question']."\n";
-}*/
+        $pdo = connectDB();
+
+        $sql = "SELECT Entreprise.id, Entreprise.name, Grille.id AS id_grille, Axe.nom AS nom_axe, Categorie.nom AS nom_categorie, Question.texte AS texte_question, Question.texte_2_point, Question.texte_1_point, Question.texte_0_point, Reponse.point, Reponse.commentaire FROM Entreprise INNER JOIN Grille ON Grille.entreprise_id = Entreprise.id INNER JOIN Axe ON Grille.id = Axe.grille_id INNER JOIN Categorie ON Axe.id = Categorie.axe_id INNER JOIN Question ON Categorie.id = Question.categorie_id INNER JOIN Reponse ON Question.id = Reponse.question_id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
+
+    } catch (PDOException $e) {
+        //display error
+        die("ERROR: Could not connect. " . $e->getMessage());
+    }
+
+}
+
+function getCalculRes($axe) {
+
+    try {
+
+        $pdo = connectDB();
+
+        $sql = "SELECT Reponse.point, Reponse.commentaire FROM Grille INNER JOIN Axe ON Grille.id = Axe.grille_id INNER JOIN Categorie ON Axe.id = Categorie.axe_id INNER JOIN Question ON Categorie.id = Question.categorie_id INNER JOIN Reponse ON Question.id = Reponse.question_id WHERE Axe.nom = :axe";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(":axe", $axe);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $total = 0;
+        foreach ($result as $res) {
+            $total += $res['point'];
+        }
+
+        return $total;
+
+    } catch (PDOException $e) {
+        //display error
+        die("ERROR: Could not connect. " . $e->getMessage());
+    }
+
+}
