@@ -13,11 +13,12 @@ if ($id == null) {
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-    CURLOPT_URL => "http://localhost:8888/api/synthese?id=$id",
+    CURLOPT_URL => "https://172.16.47.122/api/synthese?id=$id",
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_TIMEOUT => 30,
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    CURLOPT_CUSTOMREQUEST => "GET"
+    CURLOPT_CUSTOMREQUEST => "GET",
+    CURLOPT_SSL_VERIFYPEER => false
 ));
 
 $response = curl_exec($curl);
