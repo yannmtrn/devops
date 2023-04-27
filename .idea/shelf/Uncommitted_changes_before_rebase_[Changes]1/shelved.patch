@@ -1,0 +1,37 @@
+Index: API.php
+===================================================================
+diff --git a/API.php b/API.php
+new file mode 100644
+--- /dev/null	
++++ b/API.php	
+@@ -0,0 +1,29 @@
++<?php
++
++require 'connectDB.php';
++
++use Nyholm\Psr7\Factory\Psr17Factory;
++
++$responseFactory = new Psr17Factory();
++
++\Slim\Factory\AppFactory::setResponseFactory($responseFactory);
++
++$app = \Slim\Factory\AppFactory::create();
++
++$app->get('/API/Entreprise', function ($request, $response, $args) {
++    $result = getAllEntreprise();
++    return $response->withJson($result);
++});
++
++$app->get('/API/Question', function ($request, $response, $args) {
++    $result = getAllQuestion();
++    return $response->withJson($result);
++});
++
++$app->get('/API/Synthèse', function ($request, $response, $args) {
++    $axe = $request->getQueryParam('axe');
++    $result = getCalculRes($axe);
++    return $response->withJson($result);
++});
++
++$app->run();
+\ No newline at end of file

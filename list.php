@@ -2,18 +2,34 @@
 
 require_once 'connectDB.php';
 
-$entreprises = getAllEntreprise();
+// appel de l'api pour récupérer les questions
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+    CURLOPT_URL => "http://localhost:8888/api/entreprises",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "GET"
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+$entreprises = json_decode($response, true);
 
 ?>
 
 <!doctype html>
 <html lang="fr">
 <head>
-    <?php include 'head.php'; ?>
+    <?php include './component/head.php'; ?>
     <title>Liste de diagnostic</title>
 </head>
 <header>
-    <?php include 'navbar.php'; ?>
+    <?php include './component/navbar.php'; ?>
 </header>
 <body>
     <div>
@@ -28,7 +44,7 @@ $entreprises = getAllEntreprise();
 
         foreach ($entreprises as $entreprise) {
             echo '<tr>';
-            echo '<td class="text-wrap col-2"><a href="entreprise.php?id='.$entreprise['id'].'">' . $entreprise['name'] . '</a></td>';
+            echo '<td class="text-wrap col-2"><a href="/entreprise?id='.$entreprise['id'].'">' . $entreprise['name'] . '</a></td>';
             echo '</tr>';
         }
 

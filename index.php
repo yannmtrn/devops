@@ -1,41 +1,65 @@
 <?php
 
-require_once 'connectDB.php';
+require_once 'api.php';
 
-// get id from url
-$id = $_GET['id'];
+$urlpath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-if ($id == null) {
-    header('Location: list.php');
+switch ($urlpath) {
+    case '':
+    case '/':
+        require("./list.php");
+        break;
+    case '/entreprise':
+        require("./entreprise.php");
+        break;
+    case '/competence':
+        require("./competence.php");
+        break;
+    case '/reactivite':
+        require("./reactivite.php");
+        break;
+    case '/numerique':
+        require("./numerique.php");
+        break;
+    case '/synthese':
+        require("./synthese.php");
+        break;
+    case '/api/entreprise':
+        if (!isset($_GET['id'])) {
+            http_response_code(400);
+            echo "400 Bad Request";
+            break;
+        }
+        $id = $_GET['id'];
+        getEntrepriseAPI($id);
+        break;
+    case '/api/entreprises':
+        getAllEntrepriseAPI();
+        break;
+    case '/api/question':
+        if (!isset($_GET['id']) || !isset($_GET['axe'])) {
+            http_response_code(400);
+            echo "400 Bad Request";
+            break;
+        }
+        $id = $_GET['id'];
+        $axe = $_GET['axe'];
+        getQuestionReponseEntrepriseAPI($id, $axe);
+        break;
+    case '/api/questions':
+        getAllQuestionAPI();
+        break;
+    case '/api/synthese':
+        if (!isset($_GET['id'])) {
+            http_response_code(400);
+            echo "400 Bad Request";
+            break;
+        }
+        $id = $_GET['id'];
+        getCalculResAPI($id);
+        break;
+    default:
+        http_response_code(404);
+        echo "404 Not Found";
+        break;
 }
-
-// get entreprise
-$entreprise = getEntreprise($id);
-
-?>
-
-<!doctype html>
-<html lang="fr">
-<head>
-    <?php include 'head.php'; ?>
-    <title>devops v1.5</title>
-</head>
-<header>
-    <?php include 'navbar.php'; ?>
-</header>
-<body>
-
-    <div class="container d-flex flex-column justify-content-center align-items-center col-8">
-
-        <div>
-            <?php
-                echo "Entreprise: ".$entreprise["name"];
-            ?>
-        </div>
-
-        <a href="competence.php" class="btn btn-primary">Suivant</a>
-
-    </div>
-
-</body>
-</html>

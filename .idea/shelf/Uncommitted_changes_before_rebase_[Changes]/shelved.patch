@@ -1,0 +1,91 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"78dfbbcb-fdf1-4d4f-837c-19eb24fa5f66\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/entreprise.php\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/head.php\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/list.php\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/competence.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/competence.php\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/connectDB.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/connectDB.php\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/devops bdd.sql\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/index.php\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/numerique.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/numerique.php\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/reactivite.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/reactivite.php\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/style.css\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/synthese.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/synthese.php\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ComposerSettings\">\n    <execution />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"PhpWorkspaceProjectConfiguration\" interpreter_name=\"PHP 8.2\" />\n  <component name=\"ProjectId\" id=\"2OxDSLZx8KCoxGoyD1lfdXBNYsT\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/Users/yannmorlon/Documents/development/www/devops&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"78dfbbcb-fdf1-4d4f-837c-19eb24fa5f66\" name=\"Changes\" comment=\"\" />\n      <created>1682493338010</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1682493338010</updated>\n      <workItem from=\"1682493338973\" duration=\"4793000\" />\n      <workItem from=\"1682500072007\" duration=\"6050000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -5,17 +5,8 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="78dfbbcb-fdf1-4d4f-837c-19eb24fa5f66" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/entreprise.php" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/head.php" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/list.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/competence.html" beforeDir="false" afterPath="$PROJECT_DIR$/competence.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/connectDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/connectDB.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/devops bdd.sql" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/numerique.html" beforeDir="false" afterPath="$PROJECT_DIR$/numerique.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/reactivite.html" beforeDir="false" afterPath="$PROJECT_DIR$/reactivite.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/synthese.html" beforeDir="false" afterPath="$PROJECT_DIR$/synthese.php" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/API.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -26,7 +17,15 @@
+     <execution />
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="main" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
+   </component>
+   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2" />
+   <component name="ProjectId" id="2OxDSLZx8KCoxGoyD1lfdXBNYsT" />
+@@ -34,23 +33,28 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/Users/yannmorlon/Documents/development/www/devops&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "dart.analysis.tool.window.visible": "false",
++    "git-widget-placeholder": "dev",
++    "last_opened_file_path": "/Users/yannmorlon/Documents/development/www/devops",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "show.migrate.to.gradle.popup": "false",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
++  <component name="RecentsManager">
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$" />
++    </key>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
