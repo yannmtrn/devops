@@ -6,36 +6,51 @@ require_once 'connectDB.php';
 $id = $_GET['id'];
 
 if ($id == null) {
-    header('Location: index.php');
+    header('Location: /');
 }
 
-// get entreprise
-$entreprise = getEntreprise($id);
+// Appel de l'api pour récupérer l'entreprise
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+    CURLOPT_URL => "http://localhost:8888/api/entreprise?id=$id",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "GET"
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+$entreprise = json_decode($response, true);
 
 ?>
 
 <!doctype html>
 <html lang="fr">
 <head>
-    <?php include 'head.php'; ?>
-    <title><?php echo $entreprise["name"]; ?></title>
+    <?php include './component/head.php'; ?>
+    <title><?php echo $entreprise[0]["name"]; ?></title>
 </head>
 <header>
-    <?php include 'navbar.php'; ?>
+    <?php include './component/navbar.php'; ?>
 </header>
 <body>
 
     <div>
         <?php
-            echo "Entreprise: ".$entreprise["name"];
+            echo "Entreprise: ".$entreprise[0]["name"];
         ?>
     </div>
 
-    <a href="competence.php?id=<?php echo $entreprise['id']; ?>">Axe compétence</a><br>
-    <a href="reactivite.php?id=<?php echo $entreprise['id']; ?>">Axe réactivité</a><br>
-    <a href="numerique.php?id=<?php echo $entreprise['id']; ?>">Axe numérique</a><br>
+    <a href="/competence?id=<?php echo $entreprise[0]['id']; ?>">Axe compétence</a><br>
+    <a href="/reactivite?id=<?php echo $entreprise[0]['id']; ?>">Axe réactivité</a><br>
+    <a href="/numerique?id=<?php echo $entreprise[0]['id']; ?>">Axe numérique</a><br>
 
-    <a href="synthese.php?id=<?php echo $entreprise['id']; ?>">Synthèse</a>
+    <a href="/synthese?id=<?php echo $entreprise[0]['id']; ?>">Synthèse</a>
 
 </body>
 </html>

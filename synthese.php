@@ -6,29 +6,43 @@ require_once 'connectDB.php';
 $id = $_GET['id'];
 
 if ($id == null) {
-    header('Location: index.php');
+    header('Location: /');
 }
 
-// get entreprise
-$entreprise = getEntreprise($id);
-$getAllQuestion = getAllQuestion($id);
+// appel de l'api pour récupérer les questions
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+    CURLOPT_URL => "http://localhost:8888/api/synthese?id=$id",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "GET"
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+$getAllRes = json_decode($response, true);
 
 ?>
 
 <!doctype html>
 <html lang="fr">
 <head>
-    <?php include 'head.php'; ?>
+    <?php include './component/head.php'; ?>
     <title>Synthèse</title>
 </head>
 <header>
-    <?php include 'navbar.php'; ?>
+    <?php include './component/navbar.php'; ?>
 </header>
 <body>
 
 <div class="container">
 
-    <a href="entreprise.php?id=<?php echo $id; ?>" class="btn btn-primary">Retour</a>
+    <a href="/entreprise?id=<?php echo $id; ?>" class="btn btn-primary">Retour</a>
 
     <div>
         <h1>Synthèse</h1>
@@ -37,7 +51,7 @@ $getAllQuestion = getAllQuestion($id);
     <div class="d-flex flex-row">
         <p>Axe compétence : </p>
         <?php
-            $note_competence = getCalculRes("Compétence");
+            $note_competence = $getAllRes["Compétence"];
             echo '<p>'.$note_competence. '/27</p>';
         ?>
     </div>
@@ -45,7 +59,7 @@ $getAllQuestion = getAllQuestion($id);
     <div class="d-flex flex-row">
         <p>Axe réactivité : </p>
         <?php
-        $note_reactivite = getCalculRes("Réactivité");
+        $note_reactivite = $getAllRes["Réactivité"];
         echo '<p>'.$note_reactivite.'/33 </p>';
         ?>
     </div>
@@ -53,7 +67,7 @@ $getAllQuestion = getAllQuestion($id);
     <div class="d-flex flex-row">
         <p>Axe numérique : </p>
         <?php
-        $note_numerique = getCalculRes("Numérique");
+        $note_numerique = $getAllRes["Numérique"];
         echo '<p>'.$note_numerique.'/60</p>';
         ?>
     </div>
