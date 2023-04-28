@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78dfbbcb-fdf1-4d4f-837c-19eb24fa5f66" name="Changes" comment="bug fix text innovation -&gt; numérique">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api.php" afterDir="false" />
+    <list default="true" id="78dfbbcb-fdf1-4d4f-837c-19eb24fa5f66" name="Changes" comment="Version 3.0.2&#10;&#10;Fix curl SSL verify">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/competence.php" beforeDir="false" afterPath="$PROJECT_DIR$/competence.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connectDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/connectDB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entreprise.php" beforeDir="false" afterPath="$PROJECT_DIR$/entreprise.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/component/head.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/component/navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numerique.php" beforeDir="false" afterPath="$PROJECT_DIR$/numerique.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactivite.php" beforeDir="false" afterPath="$PROJECT_DIR$/reactivite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/synthese.php" beforeDir="false" afterPath="$PROJECT_DIR$/synthese.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +18,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2" />
   <component name="ProjectId" id="2OxDSLZx8KCoxGoyD1lfdXBNYsT" />
@@ -47,7 +38,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/yannmorlon/Documents/development/www/devops",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -74,7 +65,38 @@
       <updated>1682493338010</updated>
       <workItem from="1682493338973" duration="4793000" />
       <workItem from="1682500072007" duration="6050000" />
+      <workItem from="1682601679253" duration="9712000" />
+      <workItem from="1682664017631" duration="1691000" />
     </task>
+    <task id="LOCAL-00001" summary="Version 3.0.0 &#10;&#10;- add API">
+      <created>1682602459541</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682602459541</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Version 3.0.0 &#10;&#10;Fix unversioned files">
+      <created>1682602498601</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682602498601</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Version 3.0.1&#10;&#10;Fix curl url">
+      <created>1682606472479</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682606472479</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Version 3.0.2&#10;&#10;Fix curl SSL verify">
+      <created>1682606880368</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682606880368</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,5 +124,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Version 3.0.0 &#10;&#10;- add API" />
+    <MESSAGE value="Version 3.0.0 &#10;&#10;Fix unversioned files" />
+    <MESSAGE value="Version 3.0.1&#10;&#10;Fix curl url" />
+    <MESSAGE value="Version 3.0.2&#10;&#10;Fix curl SSL verify" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 3.0.2&#10;&#10;Fix curl SSL verify" />
   </component>
 </project>
